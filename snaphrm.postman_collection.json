@@ -1,0 +1,619 @@
+{
+	"info": {
+		"_postman_id": "57354418-7215-4041-89b1-c7a6033c0376",
+		"name": "snaphrm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "81",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": "example.snaphrm.com",
+						"type": "text"
+					},
+					{
+						"key": "X-Referrer",
+						"value": "https://example.snaphrm.com/login",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"example@example.com\",\"password\":\"example\",\"remember_me\":false}"
+				},
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/auth/login",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appreciation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json, text/plain, */*",
+						"type": "text"
+					},
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": " example.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/appreciation?fields=id%2Caward%7Bid%2Cname%7D%2Cawardee%7Bid%2Cname%2Cfirst_name%2Clast_name%2Cprofile_image_url%2Cprofile_image%7D%2Cawardee%3Adepartment%2Cawardee%3Adesignation%2Cdate&limit=10&order=date%20desc",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"appreciation"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id%2Caward%7Bid%2Cname%7D%2Cawardee%7Bid%2Cname%2Cfirst_name%2Clast_name%2Cprofile_image_url%2Cprofile_image%7D%2Cawardee%3Adepartment%2Cawardee%3Adesignation%2Cdate"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "order",
+							"value": "date%20desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "approvals",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json, text/plain, */*",
+						"type": "text"
+					},
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": " example.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/me/approvals",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"me",
+						"approvals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "news",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json, text/plain, */*",
+						"type": "text"
+					},
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": " example.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/me/news?fields=id%2Ctitle%2Cdescription%2Cpublish_date&filters=status%20eq%20%22published%22&limit=1000&order=publish_date%20desc",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"me",
+						"news"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id%2Ctitle%2Cdescription%2Cpublish_date"
+						},
+						{
+							"key": "filters",
+							"value": "status%20eq%20%22published%22"
+						},
+						{
+							"key": "limit",
+							"value": "1000"
+						},
+						{
+							"key": "order",
+							"value": "publish_date%20desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calendar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json, text/plain, */*",
+						"type": "text"
+					},
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": " example.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/me/calendar",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"me",
+						"calendar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attendance/today",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json, text/plain, */*",
+						"type": "text"
+					},
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": " example.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/attendance/today",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"attendance",
+						"today"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json, text/plain, */*",
+						"type": "text"
+					},
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": " example.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/event?fields=id&filters=start%20lk%20%222020-05-10%25%22%20and%20type%20eq%20%22holiday%22",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"event"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id"
+						},
+						{
+							"key": "filters",
+							"value": "start%20lk%20%222020-05-10%25%22%20and%20type%20eq%20%22holiday%22"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attendance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json, text/plain, */*",
+						"type": "text"
+					},
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": " example.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/attendance?fields=id,date,status&filters=employee_id eq 4240 and status eq \"absent\" and date le \"2020-05-10\"&limit=10&order=date%20desc",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"attendance"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id,date,status"
+						},
+						{
+							"key": "filters",
+							"value": "employee_id eq 4240 and status eq \"absent\" and date le \"2020-05-10\""
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "order",
+							"value": "date%20desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json, text/plain, */*",
+						"type": "text"
+					},
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": " example.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/employee/4240/profile",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"4240",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "custom-field/employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json, text/plain, */*",
+						"type": "text"
+					},
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": " example.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/custom-field/employee/field?fields=id,label,name,type,required,values,custom_field_group&limit=1000",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"custom-field",
+						"employee",
+						"field"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id,label,name,type,required,values,custom_field_group"
+						},
+						{
+							"key": "limit",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": "example.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/employee/4240?fields=id,first_name,last_name,email,gender,date_of_birth,profile_image,profile_image_url,address,contact_number,emergency_contact_person,emergency_contact_number,marital_status,marriage_anniversary,custom_fields,",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"4240"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id,first_name,last_name,email,gender,date_of_birth,profile_image,profile_image_url,address,contact_number,emergency_contact_person,emergency_contact_number,marital_status,marriage_anniversary,custom_fields,"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": "example.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":12346,\"first_name\":\"Example  \",\"last_name\":\"Example\",\"email\":\"example@example.com\",\"gender\":\"male\",\"profile_image\":null,\"date_of_birth\":\"9999-12-14\",\"address\":\"Example\",\"contact_number\":\"Example\",\"emergency_contact_number\":\"Example\",\"emergency_contact_person\":\"Example\",\"marital_status\":\"unmarried\",\"profile_update_required\":0,\"custom_fields\":{\"field_105142\":\"FMOPS5815Q\",\"field_105155\":\"Account 1\",\"field_105157\":\"Savings\",\"field_105158\":\"Example\",\"field_105159\":\"Example\",\"field_105161\":\"Example\",\"field_105162\":\"Example\",\"field_105160\":\"Example\",\"field_105147\":\"Example\"}}"
+				},
+				"url": {
+					"raw": "https://example.snaphrm.com/api/v1/employee/4240",
+					"protocol": "https",
+					"host": [
+						"example",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"4240"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
