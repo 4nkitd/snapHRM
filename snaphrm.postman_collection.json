@@ -631,7 +631,7 @@
 				"header": [
 					{
 						"key": "X-SNAPHRM-HOST",
-						"value": "webinfomart.snaphrm.com",
+						"value": "example.snaphrm.com",
 						"type": "text"
 					}
 				],
@@ -640,10 +640,10 @@
 					"raw": "{working_from: \"home\"}"
 				},
 				"url": {
-					"raw": "https://webinfomart.snaphrm.com/api/v1/attendance/clock-in",
+					"raw": "https://example.snaphrm.com/api/v1/attendance/clock-in",
 					"protocol": "https",
 					"host": [
-						"webinfomart",
+						"example",
 						"snaphrm",
 						"com"
 					],
@@ -674,15 +674,15 @@
 				"header": [
 					{
 						"key": "X-SNAPHRM-HOST",
-						"value": "webinfomart.snaphrm.com",
+						"value": "example.snaphrm.com",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "https://webinfomart.snaphrm.com/api/v1/attendance/clock-out",
+					"raw": "https://example.snaphrm.com/api/v1/attendance/clock-out",
 					"protocol": "https",
 					"host": [
-						"webinfomart",
+						"example",
 						"snaphrm",
 						"com"
 					],
