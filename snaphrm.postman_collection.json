@@ -613,6 +613,88 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "clock-in",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": "webinfomart.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{working_from: \"home\"}"
+				},
+				"url": {
+					"raw": "https://webinfomart.snaphrm.com/api/v1/attendance/clock-in",
+					"protocol": "https",
+					"host": [
+						"webinfomart",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"attendance",
+						"clock-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clock-out",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "example",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-SNAPHRM-HOST",
+						"value": "webinfomart.snaphrm.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://webinfomart.snaphrm.com/api/v1/attendance/clock-out",
+					"protocol": "https",
+					"host": [
+						"webinfomart",
+						"snaphrm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"attendance",
+						"clock-out"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
