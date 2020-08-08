@@ -20,5 +20,3 @@
 >host = "example"
 >email="example@example.com"
 >password="example"
-
-# Under Active Development.
